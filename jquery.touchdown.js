@@ -20,8 +20,10 @@
       if ($this.attr('title')) {
         title = $this.attr('title');
       }
+
+      default_link = ($this.data('default-link')) ? $this.data('default-link') : "";
       
-      optionList += '<option value="">' + title + '</option>';
+      optionList += '<option value="'+ default_link +'">' + title + '</option>';
       
       // Convert each anchor to an `<option>`
       for (var i=0; i < anchor.length; i++) {
