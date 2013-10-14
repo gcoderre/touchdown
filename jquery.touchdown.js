@@ -19,7 +19,7 @@
       // Create a default `<option>` for the list - If this is missing, fall back to 'Select'
       if ($this.attr('title')) {
         title = $this.attr('title');
-      } 
+      }
       
       optionList += '<option value="">' + title + '</option>';
       
@@ -35,7 +35,9 @@
           linkDepth--;
         }
 
-        optionList += '<option value="' + a.attr('href') + '">' + indent + a.text() + '</option>';        
+        selected = (a.data('selected') == true) ? 'selected' : '';
+
+        optionList += '<option value="' + a.attr('href') + '"' + selected + '>' + indent + a.text() + '</option>';
         
       }
 
